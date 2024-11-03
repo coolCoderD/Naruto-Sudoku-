@@ -1,3 +1,3 @@
 # Naruto-Sudoku-
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/coolCoderD/Naruto-Sudoku-)
+[Live Site Link ](https://naruto-sudoku.vercel.app/)
