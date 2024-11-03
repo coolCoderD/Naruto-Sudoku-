@@ -18,6 +18,8 @@ function App() {
         isValid: true
       }))
     );
+
+    
     
     // This is a valid solvable board
     const initialValues = [
@@ -53,6 +55,10 @@ function App() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [hintCell, setHintCell] = useState<{ row: number; col: number } | null>(null);
   const [isSolving, setIsSolving] = useState(false);
+
+  const handleClose = () => {
+    setIsVictory(false);
+  };
 
   const handleCellClick = (row: number, col: number) => {
     if (board[row][col].isInitial || selectedSymbol === null || isSolving) return;
@@ -182,7 +188,7 @@ function App() {
         </div>
       </div>
 
-      {isVictory && <VictoryAnimation />}
+      {isVictory && <VictoryAnimation handleClose={handleClose} />}
     </div>
   );
 }
